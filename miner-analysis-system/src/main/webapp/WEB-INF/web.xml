@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <!--设置首页-->
+    <welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
+<!--
+
+	&lt;!&ndash; SpringMVC &ndash;&gt;
+    <servlet>
+        <servlet-name>SpringMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        &lt;!&ndash; 指定加载的配置文件 ，通过参数contextConfigLocation加载&ndash;&gt;
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:SpringMVC.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    &lt;!&ndash;
+          上方
+          绝对不允许写/*   /*属于目录匹配
+          在tomcat匹配过程中 有四种匹配方式
+          优先级从高到底分别为
+          精确匹配 目录匹配 后缀名匹配 /匹配
+          但是写/ 也出问题
+          要想使用/ 需要在下方说明 哪些是default处理的
+          即补上静态访问  添加给默认servlet
+       &ndash;&gt;
+    <servlet-mapping>
+        &lt;!&ndash;  所放行的类型    &ndash;&gt;
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.woff</url-pattern>
+        <url-pattern>*.woff2</url-pattern>
+        <url-pattern>*.ttf</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+        <url-pattern>*.map</url-pattern>
+        <url-pattern>*.xlsx</url-pattern>
+    </servlet-mapping>
+
+    &lt;!&ndash;过滤器 解决编码问题&ndash;&gt;
+    <filter>
+        &lt;!&ndash;名字随意 与下方filter-name的对应即可&ndash;&gt;
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        &lt;!&ndash;给一个初始化参数 指明utf-8编码&ndash;&gt;
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        &lt;!&ndash;表示对所有的servelt都起作用&ndash;&gt;
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    &lt;!&ndash;委派过滤器，用于整合其他框架&ndash;&gt;
+    <filter>
+        &lt;!&ndash;整合spring security时，此过滤器的名称固定springSecurityFilterChain&ndash;&gt;
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+-->
+
+</web-app>
